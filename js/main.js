@@ -1,4 +1,189 @@
 window.onload = function (){
+
+	function fact(n) {
+		if (n<=1) {
+			return 1
+		}
+
+		return n * (fact(n-1))
+	}
+
+	console.log(fact(5))
+
+	// function sumTo(n) {
+	// 	// if (n <= 1) {
+	// 	// 	return 1
+	// 	// }
+
+	// 	// return n + sumTo(n-1)
+	// 	var sum = 0
+	// 	for (var i = 1; i <= n; i++) {
+	// 		sum += i
+	// 	}
+
+	// 	return sum
+ // 	}
+
+	// console.log(sumTo(4))
+	
+//-------------------------------------------
+	// var x = prompt('x?', '')
+	// var n = prompt('n?', '')
+	// function pow(x,n) {
+	// 	var result = x
+	// 	for (var i = 1; i < n; i++) {
+	// 		result *= x
+	// 	}
+	// 	return result
+	// }
+
+	// if (n <= 1) {
+	// 	alert('Степень ' + n +'не поддерживается, введите целую степень, большую 1')
+	// } else {
+	// 	console.log(pow(x,n))
+	// }
+
+	
+
+	// function min(a,b) {
+	// 	// if (a<b) {
+	// 	// 	return a
+	// 	// } else {
+	// 	// 	return b
+	// 	// }
+
+	// 	return (a < b) ? a : b
+	// }
+
+	// console.log(min(10,6))
+
+	// function checkAge (age) {
+	// 	return (age > 18) ? true : confirm('Родители разрешили?')
+	// }
+	// function checkAge (age) {
+	// 	return (age > 18) || confirm('Родители разрешили?')
+	// }
+
+	// console.log(checkAge(18))
+
+//-------------------------------------------
+	// var num
+	// do {
+	// 	num = prompt('Введите число больше 100?', 0)
+	// } while (num <= 100 && num != null)
+
+	// for (var i = 0; i < 3; i++) {
+	//   console.log( "номер " + i + "!" )
+	// }
+
+	// var i = 0
+	// while (i < 3) {
+	// 	console.log( "номер " + i + "!" )
+	// 	i++
+	// }
+
+	// for (var i = 2; i <= 10; i++) {
+	// 	if (i % 2 !== 0) {
+	// 		console.log(i)
+	// 	}
+	// }
+
+	//-------------------------------------------
+
+	// alert("" + 1 + 0) // "10"
+	// alert("" - 1 + 0) // -1
+	// alert(true + false) // true
+	// alert(6 / "3" ) // 2
+	// alert("2" * "3" ) // 6
+	// alert(4 + 5 + "px") // 9px
+	// alert("$" + 4 + 5) // $45
+	// alert("4" - 2) // 2
+	// alert("4px" - 2) // NaN
+	// alert(7 / 0) // Infinity
+	// alert("  -9\n" + 5) // -9 
+													// 5
+	// alert("  -9\n" - 5) // -14
+	// alert(5 && 2) // 2
+	// alert(2 && 5) // 5
+	// alert(5 || 0) // 5
+	// alert(0 || 5) // 5
+	// alert(null + 1) // 1
+	// alert(undefined + 1) // NaN
+	// alert(null == "\n0\n") // false
+	// alert(+null == +"\n0\n") // true
+
+	//-------------------------------------------
+
+	// var count = 0 
+
+	// while (count < 10) {
+	// 	console.log(count)
+	// 	count++
+	// }
+	//-------------------------------------------
+
+	// var age = 91
+	// if ( age >= 18 && age <= 90 ) {
+	// 	console.log(age + ' true')
+	// } else {
+	// 	console.log('false')
+	// }
+
+	//-------------------------------------------
+
+	// var login = 'Директор'
+	// var message = (login == 'Вася') ? 'Привет' :
+	// 							(login == 'Директор') ? 'Здравствуйте' :
+	// 							(login == '') ? 'Нет логина' :
+	// 							''
+	// alert(message)
+
+	//-------------------------------------------
+	// var result, a = 1, b = 1 
+	// result = (a + b < 4) ? 'Мало' : 'Много';
+	// alert(result)
+
+	//-------------------------------------------
+
+	// var userName = prompt('Enter You NAme', '')
+
+	// if ( userName == 'Админ') {
+	// 	var pasword = prompt('Password', '')
+	// 	if (pasword == 'Чёрный Властелин') {
+	// 		alert('Добро пожаловать!')
+	// 	} else if (!pasword) {
+	// 		alert('Вход отменён')
+	// 	} else {
+	// 		alert('Пароль неверен')
+	// 	}
+	// } else if (!userName) {
+	// 	alert('Вход отменён')
+	// } else {
+	// 	alert('Я вас не знаю')
+	// }
+
+	//-------------------------------------------
+
+	// var num = prompt('Enter Number', '0')
+
+	// var message = (num > 0) ? (num + ' значение больше нуля') :
+	// 							(num < 0) ? (num + ' значение меньше нуля') :
+	// 							'значение равно нулю'
+
+	// alert( message )
+
+	//----------------------------------
+
+	// var user = prompt('Каково «официальное» название JavaScript?', '')
+
+	// if (user == 'ECMAScript') {
+	// 	alert('Верно!')
+	// } else {
+	// 	alert('Не знаете? «ECMAScript»!')
+	// }
+
+
+
 	document.body.style.fontSize = '25px';
 	
 	// Блоки з мінянням кольору по кліку
