@@ -1,14 +1,346 @@
-window.onload = function (){
+function stringWork () {
+		var str = document.getElementById('head').innerHTML;
+		////////////////////////////////////////////////////
 
-	function fact(n) {
-		if (n<=1) {
-			return 1
-		}
+		// new String()
+		// String()
 
-		return n * (fact(n-1))
+		// var result = typeof String(str)
+		// var result = str.charAt(10) 
+
+		// charAt() - видає букву під номером
+		// var result = str[10]
+
+		// charCodeAt() - видає код букви під номером
+		// var result = str.charCodeAt(10)
+
+		// concat() - добавляє до строки
+		// var result = str.concat(' Hello', ' World', '!!!')
+		// var result = str + ' Hello' + ' World' + '!!!'
+
+		// fromCharCode() - Складає строку з символів
+		// var result = String.fromCharCode(str.charCodeAt(10),str.charCodeAt(9))
+
+		// indexOf() - виконує пошук в строці/ і повертає номер першого символу строки
+										// а інакше поввертає -1 
+										// другий аргумент з якої позиції пошук
+		// var result = str.indexOf('amet', 21)
+		// var result = str.lastIndexOf() - пошук з кінця
+
+		// slice() повертає строку в межах. перший включно. 2 аргумент не включно
+		// var result = str.slice(6,10)
+
+		// split() - розбиває строку на масим строк 1) аргумент розділювач 2 арг скільки ячейок в масиві
+		// var result = str.split(' ',2)
+
+		// substr(1,2) - повертає кусок строки з арг1 в кількость арг2
+		// var result = str.substr(1,2)
+		// var result = str.substring(1,3) - арг2 до якого символа (не включно)
+
+		// var result = str.toLocaleLowerCase()
+		// var result = str.toLocaleUpperCase()
+		// var result = str.toUpperCase()
+		// var result = str.toLowerCase()
+
+			//________________ Математические преобразования 
+
+		// var result = Math.abs(-10) // 10
+		// var result = Math.acos(-1) // 3.141592653589793
+
+		// var result = Math.ceil(3.6) // Заукруглює до ближжай	шого верхнього
+		// var result = Math.ceil(-3.6) //-3
+
+		// var result = Math.floor(3.6) // 3 Заукруглює до ближжай	шого нижнього
+		// var result = Math.floor(-3.6) // -4
+
+		// var result = Math.max(3.6, 4,5.2,5) // повертає найбільший аргумент з списку
+		// var result = Math.min(3.6, 4,5.2,5) // повертає найменший аргумент з списку
+		
+		// var result = Math.pow(2,3) // до степеня
+
+		// var result = Math.random() // від 0.0 до 1.0
+		// var result = Math.floor(Math.random() * 100) // від 1 до 100
+
+		// var result = Math.sqrt(25) // 5 квадратний корінь
+
+		var numb = 10.6
+
+		// var result = numb.toFixed(3) // 10.600
+		// var result = numb.toPrecision(3) // 10.6
+		// var result = numb.toPrecision(2) // 11
+
+		// var result = parseFloat('10.23Hello World') // 10.23 перебирає і находить перше число в строці
+		var result = parseInt('10.23Hello World') // 10 перебирає строку в ціле число
+		
+		////////////////////////////////////////////////////
+		document.getElementById('result').innerHTML = result;
 	}
 
-	console.log(fact(5))
+
+window.onload = function (){
+
+	stringWork()
+
+
+	// function ucFirst (str) {
+	// 	return str[0].toUpperCase() + str.slice(1)
+	// }
+	// console.log(ucFirst('duru'))
+
+	// var n = 12.123456
+	// console.log(+n.toFixed(3) + 3)
+
+	// var a = +prompt('Number 1','')
+	// var b = +prompt('Number 2', '')
+
+	// alert(a + b)
+
+	// class User {
+
+	//   constructor(name) {
+	//     this.name = name;
+	//   }
+
+	//   sayHi() {
+	//     alert(this.name);
+	//   }
+
+	// }
+
+	// let user = new User("Вася");
+	// user.sayHi(); // Вася
+
+	// var arr1 = [1,2,3,11,10,7,2,2,8]
+	// var arr2 = 2
+
+	// var res = arr1.filter(function (v,i,a) {
+	// 	return v > 3 && v < 10
+	// })
+	// console.log(res)
+
+	// var arr = ["test", 2, 1.5, false]
+
+	// function find(arr, value) {
+	// 	for (var i = 0; i < arr.length; i++) {
+	// 		if (arr[i] === value) {
+	// 			return i
+	// 		}
+	// 		return -1
+	// 	}
+	// }
+	// console.log(arr.indexOf(1.5))
+
+	// var rand = Math.floor(Math.random() * arr1.length)
+	// console.log(arr1[rand])
+
+	// var arr3 = ['Джаз', 'Блюз']
+	// arr3[arr3.length] = 'Рок-н-Ролл'
+	// arr3.splice(arr3.length - 2, 1, 'Классика') // arr3[arr3.length - 2] = 'Классика'
+	// console.log(arr3.shift())
+	// console.log(arr3)
+	// arr3.unshift('Рэп', 'Регги')
+	// console.log(arr3)
+
+	// arr1.push('Компьютер')
+	// arr1[arr1.length] = 'jaerbi'
+	// console.log(arr1)
+
+	// function lastElement (a) {
+	// 	var res = a.length - 1
+	// 	return a[res]
+	// }
+	// console.log(arr1[arr1.length - 1])
+	// console.log(lastElement(arr1))
+
+
+	// for in - цикл де key (індех, або імя свойства)
+	// arr1['hello'] = 'world' // (свойство => значення)
+	// for (var key in arr1) {
+	// 	console.log(key + ' => ' + arr1[key])
+	// }
+
+	// indexOf - шукає в масиві елемент з вказаним значення і поветає його індех, або -1 якщо немає (з початку масиму)
+	// console.log(arr1.indexOf(2))
+	// lastIndexOf - (з кінця масиву)
+	// console.log(arr1.lastIndexOf(2))
+
+	// reduceRight - від більших індексів до менших
+	// reduce - обєднує масив, повертаре один елемент, приймає два параметра
+	// 1) функція
+	// 2) початкове значення
+	// х - початкове значення або початок масиву, а потім накоплене значення 
+	// у - поточна ячейка
+	// var res = arr1.reduce(function (x,y) {
+	// 	return x + y
+	// }, 0)
+	// console.log(res)
+
+
+	// every - повертає true, якщо функція повертає тру для всіх елементів масиву
+	// var res = arr1.every(function (v,i,a) {
+	// 	return v < 5
+	// })
+	// console.log(res)
+
+	// some - повертає true, якщо хочаб один повертає тру 
+	// var res = arr1.some(function (v,i,a) {
+	// 	return v < 5
+	// })
+	// console.log(res)
+
+	// filter - повертає деякі елемент початкового масиву/ Функція має повертати true або false
+	// var res = arr1.filter(function (v,i,a) {
+	// 	return v < 5 && v > 2
+	// })
+	// console.log(res)
+
+	// map - повертає масив значень . функція обовязково має вертати якесь 
+															// значення. повертає новий масив не міняючи
+	// var res = arr1.map(function (v,i,a) {
+	// 	return v * v
+	// })
+	// console.log(res)
+
+	// forEach - обходить елементи масиву для кожного визиває задану функцію
+	// параметри
+	// 1) v - значення елементу масиву
+	// 2) i - індекс елементу масиву
+	// 3) a - сам масив
+	// arr1.forEach(function (v,i,a) {
+	// 	a[i] = v + 10 + ' hello'
+	// })
+	// console.log(arr1)
+
+	// delete - видаляє елемент з масивуб лишає пусту ячейку
+	// delete arr1[1]
+	// console.log(arr1)
+
+	// shift - видаляє з початку і повертає видалений
+	// arr1.shift()
+	// console.log(arr1.shift())
+	// console.log(arr1)
+
+	// unshift - добавляє в початок масиву
+	// arr1.unshift(30,40,50)
+	// console.log(arr1)
+
+	// pop - видаляє останній елемент масиву (повертає видалений)
+	// arr1.pop()
+	// arr1.pop()
+	// console.log(arr1)
+
+	// push - добавляє до масиву в кінець масиву
+	// arr1.push(20,30,40,['text1','text2'])
+	// console.log(arr1)
+
+	// splice - робить вставку або видаляє елемент масиву, міняє масив (зщвертає видалений) 
+	// параметри
+	// 1) показує з якого індекса буде вставка чи видалення (включно)
+	// 2) каже скільки елементів будуть вирізано з масиву (0 - нічого не удаляє)
+	// 3) вписані елементи буду ть добавлені до масиву
+	// arr1.splice(1,4,'hello','world')
+	// console.log(arr1.splice(1,4,'hello','world'))
+	// console.log(arr1)
+
+	// slice - повертає фрагмент указаного масиву параметри початок(включнл), кінець(не включно)
+	// console.log(arr1.slice(0,2))
+
+	// concat - створює новий масив в якуму є елементи масива до якого використаний і переданих
+	// var arr_res = arr1.concat(13,15,17)
+	// var arr_res2 = arr_res.concat([14,16,18])
+	// console.log(arr_res2)
+
+	// sort - сортує і повертає відсортований масив. якщо без параметрів то поалфавіту
+	// arr1.sort()
+	// console.log(arr1)
+	// arr1.sort(function(a,b) {
+	// 	return b - a
+	// })
+	// console.log(arr1)
+
+	// reverse - міняє і повертає перерозпреділений масив
+	// arr1.reverse()
+	// console.log(arr1)
+
+	// join - Метод Обєднує всі елементи масиву в строки 
+	// console.log(arr1.join(' - '))
+
+	// if (Array.isArray(arr2)) {
+	// 	console.log('true')
+	// } else {
+	// 	console.log('false')
+	// }
+
+	// if (23 in arr1) {
+	// 	console.log('true')
+	// } else {
+	// 	console.log('false')
+	// }
+
+	//-------------------------------------------
+
+	// var arr2 = new Array(2,3,45,63,31,43,67,78,23,455,34)
+
+	// var arr3 = new Array(5)
+
+	// arr3.push(1,2,3,41,12,13,42,5,6)
+
+	// arr3[5] = 'hello'
+	// arr3[100] = 100
+
+	// var k = Object.keys(arr3)
+
+	// for (var i = 0; i < k.length; i++) {
+	// 	document.write(k[i] + ' => ' + arr3[k[i]] + '<br />')
+	// }
+
+	// console.log(k)
+
+	//-------------------------------------------
+
+	// var arr = [19,2,3,44,5,6,7,8,13,77,33]
+
+	// function filterForUp (x) {
+	// 	return x >= 10
+	// }
+
+	// console.log(arr.filter((x) => { return x >= 10 }))
+
+	//-------------------------------------------
+
+	// function fib(n) {
+	// 	var a = 1, b = 1
+	// 	for (var i = 3; i <= n; i++) {
+	// 		c = a + b
+	// 		a = b
+	// 		b = c
+	// 	}
+	// 	return b
+	// }
+
+	// console.log(fib(7))
+
+	// function fib(n) {
+	// 	var a = 1, b = 1, c
+	// 	for (var i = 3; i <= n; i++) {
+	// 		c = a + b 
+	// 		a = b
+	// 		b = c
+	// 	}
+	// 	return b
+	// }
+
+	// console.log(fib(77))
+
+	// function fact(n) {
+	// 	if (n<=1) {
+	// 		return 1
+	// 	}
+
+	// 	return n * (fact(n-1))
+	// }
+
+	// console.log(fact(5))
 
 	// function sumTo(n) {
 	// 	// if (n <= 1) {
