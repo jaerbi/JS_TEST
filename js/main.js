@@ -316,8 +316,8 @@ window.onload = function (){
 	var arr2 = 2
 
 
-//-------------------------------------------//-------------------------------------------//-------------------------------------------//-------------------------------------------
-//-------------------------------------------//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-----------------------------------------
+//-------------------------------------------//-------------------------------------------//-----------------------------------------
 	
 	//for in - цикл де key (індех, або імя свойства)
 	arr1['hello'] = 'world' // (свойство => значення)
@@ -362,7 +362,7 @@ window.onload = function (){
 	// console.log(res)
 
 	//map - повертає масив значень . функція обовязково має вертати якесь 
-							//								значення. повертає новий масив не міняючи
+							//значення. повертає новий масив не міняючи
 	var res = arr1.map(function (v,i,a) {
 		return v * v
 	})
@@ -455,8 +455,8 @@ window.onload = function (){
 	// } else {
 	// 	console.log('false')
 	// }
-//-------------------------------------------//-------------------------------------------//-------------------------------------------//-------------------------------------------
-//-------------------------------------------//-------------------------------------------//-------------------------------------------//-------------------------------------------
+//-------------------------------------------//-------------------------------------------//-----------------------------------------
+//-------------------------------------------//-------------------------------------------//-----------------------------------------
 
 	document.body.style.fontSize = '25px';
 	
@@ -619,7 +619,22 @@ function User (name, age) {
         }
     }
 }
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An NgModule is defined by a class decorated with @NgModule(). The @NgModule() decorator is a function that takes a single metadata
+object, whose properties describe the module. The most important properties are as follows.
 
+declarations: The components, directives, and pipes that belong to this NgModule.
+
+exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
+
+imports: Other modules whose exported classes are needed by component templates declared in this NgModule.
+
+providers: Creators of services that this NgModule contributes to the global collection of services; 
+they become accessible in all parts of the app. (You can also specify providers at the component level, which is often preferred.)
+
+bootstrap: The main application view, called the root component, which hosts all other app views. 
+Only the root NgModule should set the bootstrap property.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Компонент – основная структурная единица Angular приложения, которая «контролирует определенную часть экрана».
 Если упростить то, Angular приложение это дерево компонентов, вложенных друг в друга и объединенных в модули.
 
