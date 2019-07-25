@@ -634,6 +634,15 @@ they become accessible in all parts of the app. (You can also specify providers 
 
 bootstrap: The main application view, called the root component, which hosts all other app views. 
 Only the root NgModule should set the bootstrap property.
+
+An Attribute Directive changes the appearance or behavior of a DOM element.
+Structural Directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing,
+or manipulating elements.
+A Pipe takes in data as input and transforms it to a desired output.
+
+Services are a great way to share information among classes that don't know each other. In service i can store the information
+A provider is something that can create or deliver a service
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Компонент – основная структурная единица Angular приложения, которая «контролирует определенную часть экрана».
 Если упростить то, Angular приложение это дерево компонентов, вложенных друг в друга и объединенных в модули.
