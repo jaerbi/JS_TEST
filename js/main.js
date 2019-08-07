@@ -702,12 +702,48 @@ reduce/reduceRight – для прохода по массиву с вычисл
 
 function printArgs() {
   var join = [].join; // скопируем ссылку на функцию в переменную
-
   // вызовем join с this=arguments,
   // этот вызов эквивалентен arguments.join(':') из примера выше
   var argStr = join.call(arguments, ':');
 
   alert( argStr ); // сработает и выведет 1:2:3
 }
-
 printArgs(1, 2, 3);
+==================================================
+let a = func(); a(); a(); a(); // count = 3
+let b = func(); b(); // count = 1
+
+func() {
+  let count = 0;
+  return () => {
+    count++
+    return count;
+  }
+}
+==================================================
+let a = {		let b = {
+  name: 'Text',		  name: 'Text 2',
+  age: 13,		  age: 18
+}			}
+func(str, num) {		func.call(a, str, num)
+  this.name = str;		func.apply(b, [str, num])
+  this.age = num;		let funcTwo = func.bind(a); funcTwo(str, num)
+}				let funcThree = func.bind(a, str); funcThree(num)
+==================================================
+let arrMap = new Map([ 			arrMap.set('d', 3);   		let arrSet = new Set([ 		arrSet.add('d'); // added d
+  ['a', 1],				arrMap.get('d') // 3		'a',				arrSet.add('a') // not added a
+  ['b', 2],				arrMap.has('d') // true		'b',				arrSet.delete('d')
+  ['c', 3],				arrMap.delete('d')		'c',				arrSet.size // 3
+])					arrMap.size // 3			arrSet.forEach((value, valueAgain, set) => {}
+================================================================================================
+Функціональне програмування
+Замикання. Карирование. Мемоизация
+================================================================================================
+Об'єктно орієнтована парадигма
+Поліморфізм, Наслідування, Інкапсуляція
+	Карирование					func(width, length, height) {
+let funcWidth = func.bind(null, 10);			     return width * length * height;
+let funcWidthLength = funcWidth.bind(null, 20);		}
+let result = funcWidthLength(15);
+=================================================================================================
+	
