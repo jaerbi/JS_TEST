@@ -692,7 +692,6 @@ indexOf/lastIndexOf – возвращают позицию элемента в 
 
 Object.keys(obj) возвращает массив свойств объекта.
 
-Мы рассмотрели методы:
 forEach – для перебора массива.
 filter – для фильтрации массива.
 every/some – для проверки массива.
@@ -746,4 +745,51 @@ let funcWidth = func.bind(null, 10);			     return width * length * height;
 let funcWidthLength = funcWidth.bind(null, 20);		}
 let result = funcWidthLength(15);
 =================================================================================================
-	
+imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })],
+export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService) {}
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot
+ ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return true
+  }
+}
+canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot
+): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return this.canActivate(childRoute, state);
+}
+=================================================================================================
+@ViewChild('form', {static: true}) slForm: NgForm;
+
+ private route: ActivatedRoute, // this.route.params.subscribe
+    private router: Router, // this.router.navigate(['../'], {relativeTo: this.route});
+=================================================================================================
+@Pipe({name: 'exponentialStrength'})
+export class ExponentialStrengthPipe implements PipeTransform {
+  transform(value: number, exponent?: number): number {
+    return Math.pow(value, isNaN(exponent) ? 1 : exponent);
+  }
+}
+=================================================================================================
+export class GreenDirective implements OnInit {
+  // @Input() addClass = 'light-blue lighten-3';
+  @Input('appGreen') addClass = 'light-blue lighten-3';
+  @HostBinding('className') backgroundForText: string;
+  @HostBinding('style.color') colorForText = '#333333';
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  ngOnInit(): void {
+    // this.elementRef.nativeElement.className = 'teal darken-2';
+    // this.elementRef.nativeElement.style.color = '#f2f2f2';
+
+    // this.renderer.addClass(this.elementRef.nativeElement, 'lighten-4');
+    // this.renderer.addClass(this.elementRef.nativeElement, 'teal');
+    this.backgroundForText = this.addClass;
+  }
+  @HostListener('mouseenter', ['$event']) mouseHover(eventData: Event): void {
+    this.backgroundForText = 'teal darken-2';
+    this.colorForText = '#f2f2f2';
+  }
+  @HostListener('mouseleave', ['$event']) mouseLeave(eventData: Event): void {
+    this.backgroundForText = this.addClass;
+    this.colorForText = '#333333';
+ }}
+ =================================================================================================
