@@ -604,7 +604,11 @@ encapsulation - По умолчанию все свойства объектов
 
 function User (name, age) {
     this.name = name;
-    var _age = age;
+    let _age = age;
+    let func = () => console.log('asdas')
+    this.getFunc() {
+	    func();
+    }
     this.displayInfo = function(){
         document.write("Имя: " + this.name + "; возраст: " + _age + "<br>");
     };
