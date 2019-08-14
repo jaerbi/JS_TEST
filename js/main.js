@@ -592,12 +592,14 @@ window.onload = function (){
 	b6.onclick= function (){
 		document.querySelector('#table').removeChild(document.querySelector('h3'));
 	}
-
 }
 
-Поліморфізм є одним з принципів об'єктно-орієнтованого програмування (ООП).
-Це практика проектування об'єктів для обміну поведінкою і здатність перевизначити спільну поведінку з конкретними.
-Для того, щоб це сталося, поліморфізм використовує переваги успадкування.
+Функціональне програмування				Об'єктно орієнтована парадигма
+Замикання. Карирование. Мемоизация			Поліморфізм, Наслідування, Інкапсуляція
+================================================================================================
+
+Поліморфізм це властивість яка дозволяє одне і теж ім'я (наприклад метода) використовувати для вирішення декількох зовні схожих
+але технічно різних методів. Викоистання методів успадкованих. видозмінювати їх чи доповнювати
 
 encapsulation - По умолчанию все свойства объектов являются публичными, общедоступными, и мы к ним можем обратиться 
 из любого места программы. Но мы можем их скрыть от доступа извне, сделав свойства локальными переменными:
@@ -611,6 +613,7 @@ function User (name, age) {
     }
     this.displayInfo = function(){
         document.write("Имя: " + this.name + "; возраст: " + _age + "<br>");
+	    return this
     };
     this.getAge = function() {
         return _age;
@@ -622,6 +625,15 @@ function User (name, age) {
             console.log("Недопустимое значение");
         }
     }
+}
+function UserTwo(name, age, bal) {
+	User.call(this, name, age);
+	let originFunc = this.displayInfo
+	this.displayInfo = function(age, bal) {
+		document.write("Имя: " + this.name + "; возраст: " + bal + "<br>");
+		originFunc.call(this, bal)
+		return this
+	}
 }
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 An NgModule is defined by a class decorated with @NgModule(). The @NgModule() decorator is a function that takes a single metadata
@@ -739,11 +751,6 @@ let arrMap = new Map([ 			arrMap.set('d', 3);   		let arrSet = new Set([ 		arrSe
   ['c', 3],				arrMap.delete('d')		'c',				arrSet.size // 3
 ])					arrMap.size // 3			arrSet.forEach((value, valueAgain, set) => {}
 ================================================================================================
-Функціональне програмування
-Замикання. Карирование. Мемоизация
-================================================================================================
-Об'єктно орієнтована парадигма
-Поліморфізм, Наслідування, Інкапсуляція
 	Карирование					func(width, length, height) {
 let funcWidth = func.bind(null, 10);			     return width * length * height;
 let funcWidthLength = funcWidth.bind(null, 20);		}
