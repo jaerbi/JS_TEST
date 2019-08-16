@@ -609,6 +609,14 @@ let funcWidth = func.bind(null, 10);			     return width * length * height;
 let funcWidthLength = funcWidth.bind(null, 20);		}
 let result = funcWidthLength(15);
 =================================================================================================
+Наслідування 
+function Animal(name, voice) {				// 1) Object.setPrototypeOf
+	this.name = name				// 2) Object.create
+	this.voice = vocice				// 3) using new 
+}						// створення прототипуів
+Animal.prototype.say = function() { // ... }
+const obj = Object.create(objProto)
+const objTwo = new Animal('Dog', 'foof')
 
 Поліморфізм це властивість яка дозволяє одне і теж ім'я (наприклад метода) використовувати для вирішення декількох зовні схожих
 	але технічно різних методів. Викоистання методів успадкованих. видозмінювати їх чи доповнювати
@@ -647,49 +655,7 @@ function UserTwo(name, age, bal) {
 		return this
 	}
 }
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An NgModule is defined by a class decorated with @NgModule(). The @NgModule() decorator is a function that takes a single metadata
-object, whose properties describe the module. The most important properties are as follows.
-
-declarations: The components, directives, and pipes that belong to this NgModule.
-
-exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
-
-imports: Other modules whose exported classes are needed by component templates declared in this NgModule.
-
-providers: Creators of services that this NgModule contributes to the global collection of services; 
-they become accessible in all parts of the app. (You can also specify providers at the component level, which is often preferred.)
-
-bootstrap: The main application view, called the root component, which hosts all other app views. 
-Only the root NgModule should set the bootstrap property.
-
-An Attribute Directive changes the appearance or behavior of a DOM element.
-Structural Directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing,
-or manipulating elements.
-A Pipe takes in data as input and transforms it to a desired output.
-
-Services are a great way to share information among classes that don't know each other. In service i can store the information
-A provider is something that can create or deliver a service
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Компонент – основная структурная единица Angular приложения, которая «контролирует определенную часть экрана».
-Если упростить то, Angular приложение это дерево компонентов, вложенных друг в друга и объединенных в модули.
-
-Декоратор – часть синтаксиса TypeScript.
-По сути это функция, которая позволяет сконфигурировать компонент. Для того чтоб класс стал компонентом,
-	перед ним необходимо указать декоратор @Component и передать ему специальный конфигурационный объект.
-	
-Дерективи (attribute) міняють відображення або поведінку DOM елементів, встановлюють значення в атрибут HTML елемент і тд.
-ngClass, ngStyle, ngModel
-___________
-Дерективи (structural) міняють HTML структуру в цілому, шляхом додовання чи видалення елементу на котрому прописана
-ngIf, ngSwitch, ngFor
-*ngFor="let item of items; index as i; first as isFirst; odd as isOdd; trackBy: trackByFn"
-
-trackByFn(index, item) {
-	return item.id;
-}
-
+=================================================================================================
 Поднятие или hoisting — это механизм в JavaScript в котором переменные и объявления функций передвигаются вверх 
 своей области видимости перед тем, как код будет выполнен. Как следствие, это означает то, что совершенно неважно
 где функция или переменные были объявлены, они передвигаются вверх своей области видимости, 
@@ -698,8 +664,6 @@ trackByFn(index, item) {
 Классом в объектно-ориентированной разработке называют шаблон/программный код, 
 	предназначенный для создания объектов и методов.
 AJAX (аббревиатура от «Asynchronous Javascript And Xml») – технология обращения к серверу без перезагрузки страницы.
-	
-Методы массивов: let arr[1,2,3]
 
 push/pop, shift/unshift, 
 splice – для добавления и удаления элементов. arr.splice(0,2,1,2,3)
@@ -711,7 +675,8 @@ concat – объединяет массивы.
 indexOf/lastIndexOf – возвращают позицию элемента в массиве (не поддерживается в IE8-).
 Дополнительно:
 
-Object.keys(obj) возвращает массив свойств объекта.
+Object.keys(obj) повертає массив властивостей об'екта.						Object.assign({}, default, obj)
+const shallowCopy = Object.assign({}, obj) shallow Копія об'єкта, також дозволяє замінювати властивості Object.assign(default, obj)
 
 forEach – для перебора массива.
 filter – для фильтрации массива.
@@ -803,4 +768,46 @@ export class GreenDirective implements OnInit {
     this.backgroundForText = this.addClass;
     this.colorForText = '#333333';
  }}
- =================================================================================================
+ ================================================================================================
+	 Компонент – основная структурная единица Angular приложения, которая «контролирует определенную часть экрана».
+Если упростить то, Angular приложение это дерево компонентов, вложенных друг в друга и объединенных в модули.
+
+Декоратор – часть синтаксиса TypeScript.
+По сути это функция, которая позволяет сконфигурировать компонент. Для того чтоб класс стал компонентом,
+	перед ним необходимо указать декоратор @Component и передать ему специальный конфигурационный объект.
+	
+Дерективи (attribute) міняють відображення або поведінку DOM елементів, встановлюють значення в атрибут HTML елемент і тд.
+ngClass, ngStyle, ngModel
+___________
+Дерективи (structural) міняють HTML структуру в цілому, шляхом додовання чи видалення елементу на котрому прописана
+ngIf, ngSwitch, ngFor
+*ngFor="let item of items; index as i; first as isFirst; odd as isOdd; trackBy: trackByFn"
+
+trackByFn(index, item) {
+	return item.id;
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An NgModule is defined by a class decorated with @NgModule(). The @NgModule() decorator is a function that takes a single metadata
+object, whose properties describe the module. The most important properties are as follows.
+
+declarations: The components, directives, and pipes that belong to this NgModule.
+
+exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
+
+imports: Other modules whose exported classes are needed by component templates declared in this NgModule.
+
+providers: Creators of services that this NgModule contributes to the global collection of services; 
+they become accessible in all parts of the app. (You can also specify providers at the component level, which is often preferred.)
+
+bootstrap: The main application view, called the root component, which hosts all other app views. 
+Only the root NgModule should set the bootstrap property.
+
+An Attribute Directive changes the appearance or behavior of a DOM element.
+Structural Directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing,
+or manipulating elements.
+A Pipe takes in data as input and transforms it to a desired output.
+
+Services are a great way to share information among classes that don't know each other. In service i can store the information
+A provider is something that can create or deliver a service
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
