@@ -613,9 +613,9 @@ let result = funcWidthLength(15);
 function Animal(name, voice) {				// 1) Object.setPrototypeOf
 	this.name = name				// 2) Object.create
 	this.voice = vocice				// 3) using new 
-}						// створення прототипуів
-Animal.prototype.say = function() { // ... }
-const obj = Object.create(objProto)
+}						// створення прототипуів ..
+Animal.prototype.say = function() { // ... }		 зараз використовують class замість функції 
+const obj = Object.create(objProto)			в класі для прототипу використовують extends
 const objTwo = new Animal('Dog', 'foof')
 
 Поліморфізм це властивість яка дозволяє одне і теж ім'я (наприклад метода) використовувати для вирішення декількох зовні схожих
