@@ -828,3 +828,24 @@ Services are a great way to share information among classes that don't know each
 A provider is something that can create or deliver a service
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	==> RXJS <==
+// when all observables complete, provide the last emitted value from each as dictionary
+forkJoin(
+	[
+	    this._paymentService.getCreditCards$(request),
+	    this._paymentService.getBankAccounts$(request),
+	    this._paymentService.getPaymentSettings$(request)
+	]
+    )
+	.pipe(
+	    takeUntilDestroyed(this),
+	    finalize(() => {
+		this.loading = false;
+	    })
+	)
+	.subscribe((respond) => {
+	    this.creditCards = respond[0];
+	    this.bankAccounts = respond[1];
+	    this.billingSettings = respond[2];
+	});
