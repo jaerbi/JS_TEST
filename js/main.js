@@ -2,7 +2,6 @@ function stringWork () {
 		var str = document.getElementById('head').innerHTML
 		////////////////////////////////////////////////////
 
-
 		// new String()
 		// String()
 
@@ -73,9 +72,6 @@ function stringWork () {
 		// var result = parseFloat('10.23Hello World') // 10.23 перебирає і находить перше число в строці
 		// var result = parseInt('10.23Hello World') // 10 перебирає строку в ціле число
 
-
-
-
 		var arrNum = [1,2,10,3,4,5,6,7,8,9]
 		var arrStr = ['Ser', 'Strewyu', 'heyu', 'jaerbi', 'Grytuo', 'Po', 'R']
 		var arrConc = arrNum.concat(arrStr, 'hello', 'world')
@@ -136,7 +132,6 @@ function stringWork () {
 		})
 		var result = arrForIn.join(' - ')
 		// console.log(arrNum)
-
 
 		var obj = {
 			one: 'hello',
@@ -222,8 +217,6 @@ window.onload = function (){
 		default:
 		console.log('default')
 	}
-
-
 	
 
 	// function User (name, email) {
@@ -236,7 +229,6 @@ window.onload = function (){
 	function testFunc (e) {
 		console.log(e.type)
 	}
-
 
 	class User {
 		constructor (name, email) {
@@ -257,7 +249,6 @@ window.onload = function (){
 	function changeClick (){
 		var style = selectP.style.color = '#' + Math.ceil(Math.random()* Math.pow(10,6))
 	}
-
 
 	var popupDiv = document.getElementById('popup')
 	var popup_close = document.getElementById('popupBtn')
@@ -307,14 +298,12 @@ window.onload = function (){
 		}
 	}
 
-
 	strText()
 	stringWork()
 
 
 	var arr1 = [1,2,3,11,10,7,2,2,8]
 	var arr2 = 2
-
 
 //-------------------------------------------//-------------------------------------------//-----------------------------------------
 //-------------------------------------------//-------------------------------------------//-----------------------------------------
@@ -437,8 +426,6 @@ window.onload = function (){
 		 console.log(arr2[key] + 'asd' + key)
 	}
 
-
-
 	//join - Метод Обєднує всі елементи масиву в строки 
 	//console.log(arr1.join(' - '))
 
@@ -447,8 +434,6 @@ window.onload = function (){
 	// } else {
 	// 	console.log('false')
 	// }
-
-
 
 	// if (2 in arr1) {
 	// 	console.log('true')
