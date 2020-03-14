@@ -53,3 +53,22 @@ class User {
       return `${this._name} = : ${this._age}`;
     }
 }
+
+nazar = new Nazar();
+yura = new User(
+    "Yura",
+    28,
+    ["Chemical", "Grishick", "Poli", "TenantCloud", "RocketHarbor"],
+    [
+      new WorkExperience("Chemical", 4),
+      new WorkExperience("Grishick", 1),
+      new WorkExperience("Poli", 1),
+      new WorkExperience("TenantCloud", 9),
+      new WorkExperience("RocketHarbor", 7)
+    ]
+);
+
+console.log(this.yura.workExperience[3].howMany());
+console.log(this.nazar.workExperience[2].howMany());
+console.log(this.yura.workExperience);
+console.log(this.nazar.filterWork('sraka', 13));
