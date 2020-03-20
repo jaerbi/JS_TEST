@@ -15,14 +15,16 @@ class Nazar {
     "Poland",
     "Mountain",
     "Baisecl",
-    "Mashrums"
+    "Mashrums",
+    "PipPop"
   ];
   workExperience: WorkExperience[] = [
     new WorkExperience("Chemical", 3),
     new WorkExperience("Poland", 1),
     new WorkExperience("Mountain", 3),
     new WorkExperience("Baisecl", 5),
-    new WorkExperience("Mashrums", 2)
+    new WorkExperience("Mashrums", 2),
+    new WorkExperience("PipPop", 1)
   ];
 
   filterWork(a: string, b: number): void {
