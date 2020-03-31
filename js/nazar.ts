@@ -57,6 +57,7 @@ class User {
 }
 
 nazar = new Nazar();
+
 yura = new User(
     "Yura",
     28,
