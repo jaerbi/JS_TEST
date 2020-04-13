@@ -813,7 +813,7 @@ Services are a great way to share information among classes that don't know each
 A provider is something that can create or deliver a service
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	
+	послідовність визовів обсервеблів
 	==> RXJS <==
 // when all observables complete, provide the last emitted value from each as dictionary
 forkJoin(
