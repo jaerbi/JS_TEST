@@ -1,4 +1,5 @@
 class WorkExperience {
+  
   constructor(public name: string, public time: number) {}
 
   howMany(): string {
