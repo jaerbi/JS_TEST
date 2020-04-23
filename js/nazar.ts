@@ -8,16 +8,16 @@ class WorkExperience {
 }
 
 class Nazar {
-  sraka = "SRAKATAN";
-  private _name: string = "Nazar";
+  sraka = 'SRAKATAN';
+  private _name: string = 'Nazar';
   private _age: number = 28;
   private _works: string[] = [
-    "Chemical",
-    "Poland",
-    "Mountain",
-    "Baisecl",
-    "Mashrums",
-    "PipPop"
+    'Chemical',
+    'Poland',
+    'Mountain',
+    'Baisecl',
+    'Mashrums',
+    'PipPop'
   ];
   workExperience: WorkExperience[] = [
     new WorkExperience("Chemical", 3),
