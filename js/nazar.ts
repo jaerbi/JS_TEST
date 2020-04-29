@@ -2,7 +2,7 @@ class WorkExperience {
   
   constructor(public name: string, public time: number) {}
 
-  howMany(): string {
+  public howMany(): string {
     return `${this.name} пропрацював ${this.time} років;`;
   }
 }
