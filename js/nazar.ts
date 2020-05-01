@@ -71,7 +71,6 @@ yura = new User(
       new WorkExperience("RocketHarbor", 7)
     ]
 );
-
 console.log(this.yura.workExperience[3].howMany());
 console.log(this.nazar.workExperience[2].howMany());
 console.log(this.yura.workExperience);
