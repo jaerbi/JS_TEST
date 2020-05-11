@@ -3,7 +3,7 @@ class WorkExperience {
   constructor(public name: string, public time: number) {}
 
   public howMany(): string {
-    return `${this.name} пропрацював ${this.time} років;`;
+    return `${this.name} пропрацював ${this.time} років!;`;
   }
 }
 
