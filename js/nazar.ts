@@ -65,7 +65,7 @@ yura = new User(
     ["Chemical", "Grishick", "Poli", "TenantCloud", "RocketHarbor"],
     [
       new WorkExperience("Chemical", 4),
-      new WorkExperience("Grishick", 1),
+      new WorkExperience("Grishick", 11),
       new WorkExperience("Poli", 1),
       new WorkExperience("TenantCloud", 9),
       new WorkExperience("RocketHarbor", 7)
