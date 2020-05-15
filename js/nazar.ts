@@ -12,7 +12,7 @@ class Nazar {
   private _name: string = 'Nazar';
   private _age: number = 28;
   private _works: string[] = [
-    'Chemical',
+    'Chemicaaaal',
     'Poland',
     'Mountain',
     'Baisecl',
