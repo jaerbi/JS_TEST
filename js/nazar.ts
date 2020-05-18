@@ -20,7 +20,7 @@ class Nazar {
     'PipPop'
   ];
   workExperience: WorkExperience[] = [
-    new WorkExperience("Chemical", 3),
+    new WorkExperience("Chemicalaaa", 3),
     new WorkExperience("Poland", 1),
     new WorkExperience("Mountain", 3),
     new WorkExperience("Baisecl", 5),
