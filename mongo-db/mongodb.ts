@@ -54,3 +54,31 @@ db.[name].replaceOne(
 ) // replacement ONE/MANY filtered object to another (like new Constructor())
 
 db.[name].deleteMany({ property1: {$gte: value1}, property1: {$lte: value2} }) // delete ONE/MANY filtered object within property1 >= value1 && property1 <= value2
+
+// like pipe()
+db.[name].bulkWrite(
+  [
+    { 
+      insertOne: {
+        "document": { property1: value, property2: value,  property3: value }
+      }
+    }
+    { 
+      deleteOne: {
+        filter: { property: value }
+      }
+    }
+    { 
+      updateOne: {
+        filter: { property: value },
+        update: { $set: {property: value} },
+      }
+    }
+    { 
+      replaceOne: {
+        filter: { property: value },
+        replacement: { property: value },
+      }
+    }
+  ]
+)
