@@ -77,7 +77,7 @@ db.[name].bulkWrite(
     { 
       replaceOne: {
         filter: { property: value },
-        replacement: { property: value },
+        replacement: { property: value, property2: value, property3: value },
       }
     }
   ]
