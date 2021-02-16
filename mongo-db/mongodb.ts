@@ -16,7 +16,14 @@ db.[name].find({}, { _id: 0 }).sort({ propertyOne: 1, propertyTwo: -1 }).limit(2
 db.[name].find({ parametr: [value] }, { _id: 0 }) // filter [property]: [value]
 db.[name].find({ parametrOne: [value], parametrTwo: [value }, { _id: 0 })
 db.[name].find({ $or: [ {parametrOne: [value]}, {parametrTwo: [value]} ]}, { _id: 0 }) // filter with or expressions (||)
-db.[name].find({ $or: [ {parametrOne: {$lt: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter less than (parametrOne < $lt)
+db.[name].find(
+                { 
+$or: [
+        { parametrOne: {$lt: [value]} },
+        { parametrTwo: [value] } 
+    ]
+}, { _id: 0 }
+              ) // filter less than (parametrOne < $lt)
 db.[name].find({ $or: [ {parametrOne: {$gt: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter greater than (parametrOne > $gt)
 db.[name].find({ $or: [ {parametrOne: {$gte: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter greater than or equal (parametrOne >= $gte)
 db.[name].find({ $or: [ {parametrOne: {$gte: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter less than or equal (parametrOne <= $lte)
