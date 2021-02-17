@@ -1,4 +1,4 @@
-mongodb node js mongoose
+mongodb nodejs mongoose
 
 use  [nameDB] // switch to db [nameDB]
 
