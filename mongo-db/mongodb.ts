@@ -24,11 +24,21 @@ $or: [
     ]
 }, { _id: 0 }
               ) // filter less than (parametrOne < $lt)
-db.[name].find({ $or: [ {parametrOne: {$gt: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter greater than (parametrOne > $gt)
-db.[name].find({ $or: [ {parametrOne: {$gte: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter greater than or equal (parametrOne >= $gte)
-db.[name].find({ $or: [ {parametrOne: {$gte: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter less than or equal (parametrOne <= $lte)
-db.[name].find({ $or: [ {parametrOne: {$eq: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter equal (parametrOne == $eq)
-db.[name].find({ $or: [ {parametrOne: {$ne: [value] } }, {parametrTwo: [value]} ]}, { _id: 0 }) // filter not equal (parametrOne != $ne)
+db.[name].find({
+  $or: [ {parametrOne: {$gt: [value] } }, {parametrTwo: [value]} ]
+}, { _id: 0 }) // filter greater than (parametrOne > $gt)
+db.[name].find({
+  $or: [ {parametrOne: {$gte: [value] } }, {parametrTwo: [value]} ]
+}, { _id: 0 }) // filter greater than or equal (parametrOne >= $gte)
+db.[name].find({ 
+  $or: [ {parametrOne: {$gte: [value] } }, {parametrTwo: [value]} ]
+}, { _id: 0 }) // filter less than or equal (parametrOne <= $lte)
+db.[name].find({
+  $or: [ {parametrOne: {$eq: [value] } }, {parametrTwo: [value]} ]
+}, { _id: 0 }) // filter equal (parametrOne == $eq)
+db.[name].find({
+  $or: [ {parametrOne: {$ne: [value] } }, {parametrTwo: [value]} ]
+}, { _id: 0 }) // filter not equal (parametrOne != $ne)
 
 db.[name].find({ parametr: {$in: [value1, value2, value3]} }, { _id: 0 }) // filter element (like includes())
 db.[name].find({ parametr: {$nin: [value1, value2, value3]} }, { _id: 0 }) // filter element (like !includes())
