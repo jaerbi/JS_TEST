@@ -9,7 +9,10 @@ db.[name].find() // showing all objects from [name]
 db.[name].find().limit(2) // showing 2 objects from [name]
 db.[name].find({}, { _id: 0 }).limit(2) // second parrametrs in find, used to hide some value in shovinf objects
 
-db.[name].find({}, { _id: 0 }).sort({ property: 1 }) // sorting { [parametrName]: (1/-1) }
+db.[name].find(
+  {},
+               { _id: 0 }).sort({ property: 1 }
+                               ) // sorting { [parametrName]: (1/-1) }
 db.[name].find({}, { _id: 0 }).sort({ propertyOne: 1, propertyTwo: -1 })
 db.[name].find({}, { _id: 0 }).sort({ propertyOne: 1, propertyTwo: -1 }).limit(2) 
 
