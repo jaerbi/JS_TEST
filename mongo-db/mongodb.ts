@@ -43,16 +43,30 @@ db.[name].find({
   $or: [ {parametrOne: {$ne: [value] } }, {parametrTwo: [value]} ]
 }, { _id: 0 }) // filter not equal (parametrOne != $ne)
 
-db.[name].find({ parametr: {$in: [value1, value2, value3]} }, { _id: 0 }) // filter element (like includes())
-db.[name].find({ parametr: {$nin: [value1, value2, value3]} }, { _id: 0 }) // filter element (like !includes())
+db.[name].find(
+  { parametr: {$in: [value1, value2, value3]} }, { _id: 0 }
+) // filter element (like includes())
+db.[name].find(
+  { parametr: {$nin: [value1, value2, value3]} }, { _id: 0 }
+) // filter element (like !includes())
 
-db.[name].find({ property: {$exists: true}, { _id: 0 }) // filter element if property exist
-db.[name].find({ property: {$exists: false}, { _id: 0 }) // filter element if property not exist
+db.[name].find(
+  { property: {$exists: true}, { _id: 0 }
+) // filter element if property exist
+db.[name].find(
+  { property: {$exists: false}, { _id: 0 }
+) // filter element if property not exist
 
-db.[name].find({ property: {$size: 2}, { _id: 0 }) // filter element if property has, and size in array.lenght == 2
-db.[name].find({ "property.index": "value", { _id: 0 }) // filter element if property has, and only if property[index] == value
+db.[name].find(
+  { property: {$size: 2}, { _id: 0 }
+) // filter element if property has, and size in array.lenght == 2
+db.[name].find(
+  { "property.index": "value", { _id: 0 }
+) // filter element if property has, and only if property[index] == value
 
-db.[name].find({"property: {$elemMatch: {$lt: value}}, { _id: 0 }) // filter element if property has, and only if property(array) property[allItems]  < value
+db.[name].find(
+   { "property": {$elemMatch: {$lt: value}}, { _id: 0 }
+   ) // filter element if property has, and only if property(array) property[allItems]  < value
 
 db.[name].updateOne({ property1: value1 }, {$set: {property2: value2} }) // updating ONE only filtered (property1: value1) element to  property2: value2
 db.[name].updateMany({ property1: value1 }, {$set: {property2: value2, property3: value3} }) // updating MANY only filtered (property1: value1) element to  property2: value2 and property3: value3
