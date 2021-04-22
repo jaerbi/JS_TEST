@@ -109,3 +109,25 @@ db.[name].bulkWrite(
     }
   ]
 )
+
+const testObj = await SomeSchema.findOne({
+                _id: id
+            }).populate('_user')
+            .populate({
+                path: '_boat',
+                populate: {
+                    path: '_user'
+                },
+            });
+
+        const booking = await Booking.findOne({
+                _id: id
+            }).populate('_user', 'id') // get only id in _user object
+            .populate({
+                path: '_home',
+                select: 'id', // get only id in _home object
+                populate: {
+                    path: '_user',
+                    select: 'id' // get only id in _user object 
+                },
+            });
