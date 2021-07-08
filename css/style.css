@@ -56,7 +56,7 @@ form {
 	align-items: center;
 	flex-direction: column;
 	margin-top: 10px;
-}
+} 
 form input, textarea {
 	outline: 0;
 	padding: 10px;
