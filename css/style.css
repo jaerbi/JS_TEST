@@ -13,6 +13,11 @@ text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
 
+/* Scroll smooth*/
+html {
+	scroll-behavior: smooth;
+}
+
 #popup {
 	position: fixed;
 	opacity: 0;
