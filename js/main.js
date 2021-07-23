@@ -131,7 +131,6 @@ function stringWork () {
 			a[i] = v + 12
 		})
 		var result = arrForIn.join(' - ')
-		// console.log(arrNum)
 
 		var obj = {
 			one: 'hello',
