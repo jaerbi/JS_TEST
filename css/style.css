@@ -13,7 +13,7 @@ text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
  
-/* Scroll smooth */  
+/* Scroll smooth */ 
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 3rem;
