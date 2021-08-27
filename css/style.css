@@ -10,7 +10,7 @@
 
 /* text three dot no wrap */
 text-overflow: ellipsis;
-white-space: nowrap;
+white-space: nowrap; 
 overflow: hidden;
  
 /* Scroll smooth */ 
