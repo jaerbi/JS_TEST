@@ -8,7 +8,7 @@
             user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 } 
 
- BreakpointObserver // media query in ts '@angular/cdk/layout';
+ BreakpointObserver // media query in ts '@angular/cdk/layout'; 
  
 /* text three dot no wrap */
 text-overflow: ellipsis;
