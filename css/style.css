@@ -14,7 +14,7 @@ BreakpointObserver // media query in ts '@angular/cdk/layout';
 text-overflow: ellipsis;
 white-space: nowrap; 
 overflow: hidden; 
-
+ 
 /* Scroll smooth */ 
 html { 
 	scroll-behavior: smooth;
