@@ -7,9 +7,8 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
- 
-BreakpointObserver // media query in ts '@angular/cdk/layout'; 
 
+BreakpointObserver // media query in ts '@angular/cdk/layout'; 
 
 /* text three dot no wrap */
 text-overflow: ellipsis;
@@ -20,6 +19,20 @@ overflow: hidden;
 html { 
 	scroll-behavior: smooth;
 	scroll-padding-top: 3rem;
+}
+
+/* Shadow one side */
+.top {
+	box-shadow: 0 -5px 5px -5px #333;
+}
+.right {
+	box-shadow: 5px 0 5px -5px #333;
+}
+.bottom {
+	box-shadow: 0 5px 5px -5px #333;
+}
+.left {
+	box-shadow: -5px 0 5px -5px #333;
 }
 
 #popup {
