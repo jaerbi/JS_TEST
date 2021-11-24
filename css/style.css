@@ -16,7 +16,7 @@ white-space: nowrap;
 overflow: hidden; 
  
 /* Scroll smooth */ 
-html { 
+html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 3rem;
 }
