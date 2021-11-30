@@ -1,0 +1,39 @@
+.yashchenko {
+    &-count {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 8px;
+        color: indigo;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 1100px;
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(110, 105, 105);
+            color: rgb(240, 228, 228);
+            border: 1px solid rgb(50, 29, 77);
+            font-size: 8px;
+
+            &.active {
+                background-color: green;
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
