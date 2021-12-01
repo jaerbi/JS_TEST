@@ -14,7 +14,7 @@ import { Component } from "@angular/core";
                 </li>
             </ul>
         </div>
-',
+', 
     styleUrls: ['./yashchenko.component.scss']
 })
 export class YashchenkoComponent {
