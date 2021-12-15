@@ -1,0 +1,78 @@
+input[type="checkbox"] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 48.25em;
+        height: 24.125em;
+        display: block;
+        border-radius: 24.125em;
+        position: relative;
+        background: #B4B4BE;
+        box-shadow: inset -2.5em 1.5em 0.5em -3em #DCDCE1,
+            inset 0.5em -0.5em 3em #E5E5E5,
+            0em 0em 0.1em 0 #9B9B9B,
+            -0.1em 0.1em 0.5em 0 #9B9B9B,
+            -0.1em 0.1em 0.5em 0 #9B9B9B;
+        transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
+
+
+        &::before {
+            content: "";
+            filter: blur(2em);
+            position: absolute;
+            top: 0.4375em;
+            left: 0.4375em;
+            width: 23.25em;
+            height: 23.25em;
+            border-radius: 100%;
+            background: radial-gradient(circle at 70% 35%, rgba(0, 0, 0, 0.1) 20%, #1e1e2388);
+            transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            filter: drop-shadow(0 0 0.5em #DCDCE1);
+            position: absolute;
+            top: 0.4375em;
+            left: 0.4375em;
+            width: 23.25em;
+            height: 23.25em;
+            border-radius: 100%;
+            background: #B4B4BE;
+            background-image: url('../../assets/img/backgrounds/switch-ball.png');
+            background-size: 150%;
+            background-position: 50% 50%;
+            transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+    }
+
+    input {
+        &:checked {
+            +label {
+                background-color: #f35c53;
+                box-shadow: inset -2.5em 1.5em 0.5em -3em #f35b53ab,
+                    inset 0.5em -0.5em 3em #f35b5385,
+                    0em 0em 0.1em 0 #f35c53,
+                    -0.1em 0.1em 0.5em 0 #f35c53,
+                    -0.1em 0.1em 0.5em 0 #f35c53;
+                transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
+
+                &::before,
+                &::after {
+                    left: calc(100% - 0.4375em);
+                    transform: translateX(-100%);
+                }
+
+                &::after {
+                    background-position: -100% 50%;
+                    filter: drop-shadow(-2em 0.1em 0.5em #f35b53ab);
+                }
+            }
+        }
+    }
