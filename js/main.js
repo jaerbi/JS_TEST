@@ -3,7 +3,7 @@
 function stringWork () {
 		var str = document.getElementById('head').innerHTML
 		////////////////////////////////////////////////////
-
+		
 		// new String()
 
 		// String()
