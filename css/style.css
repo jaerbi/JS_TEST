@@ -7,7 +7,7 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
- 
+
 BreakpointObserver // media query in ts '@angular/cdk/layout';
  
 /* text three dot no wrap */
@@ -15,7 +15,7 @@ text-overflow: ellipsis;
 white-space: nowrap; 
 overflow: hidden;
 
-/* Dynamic */
+/* Dynamic one line */
 overflow: hidden;
 display: -webkit-box;
 -webkit-line-clamp: 1;
