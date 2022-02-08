@@ -15,7 +15,7 @@ text-overflow: ellipsis;
 white-space: nowrap; 
 overflow: hidden;
 
-/* Dynamic one line */
+/* Dynamic one line */ 
 overflow: hidden;
 display: -webkit-box;
 -webkit-line-clamp: 1;
