@@ -1,5 +1,5 @@
 // angular Control value accessor nested https://stackblitz.com/edit/angular-bw57z2?file=app/test.component.ts
-  
+   
 function stringWork () {
 	var str = document.getElementById('head').innerHTML
 	////////////////////////////////////////////////////
