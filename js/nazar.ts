@@ -6,7 +6,7 @@ class WorkExperience {
     return `${this.name} пропрацював ${this.time} років!;`;
   }
 }
-
+ 
 class Nazar {
   sraka = 'SRAKATAN';
   private _name: string = 'Nazar';
