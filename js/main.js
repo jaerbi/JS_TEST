@@ -5,7 +5,7 @@ function stringWork () {
 	////////////////////////////////////////////////////
 		\\\\\\
 		// new String()
-
+ 
 		// String()
 
 		// var result = typeof String(str)
