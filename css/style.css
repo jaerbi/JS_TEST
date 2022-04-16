@@ -9,7 +9,7 @@
 }  
     
 BreakpointObserver // media query in ts '@angular/cdk/layout';
-      
+       
 /* text three dot no wrap */
 text-overflow: ellipsis;
 white-space: nowrap; 
